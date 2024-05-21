@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kelas manajemen malam</title>
+    
+    <style> 
+
+    .navbar {
+      display: flex;
+      background-color: black;
+      justify-content: flex-end;
+    }
+    .navbar-nav {
+     margin: 20px;
+      
+    }
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      margin: 20px;
+      
+    }
+    .disabled {
+     color: black;
+    }
+
+    .container {
+      width: 100%; /* Lebar kontainer */
+      max-width: 100%; /* Maksimum lebar kontainer (agar kontainer tetap responsif) */
+      margin: 0 auto; /* Membuat kontainer berada di tengah */
+    }
+    .row {
+      display: grid;
+      grid-template-columns: auto auto auto auto;
+      grid-gap: 10px; /* Memberikan jarak antar grid item */
+      height: 100%; /* Mengisi tinggi container sesuai dengan tinggi body */
+
+
+    }
+    .col-md-4 {
+      border: 1px solid black;
+      width: 200px;
+      height: 300px;
+    }
+
+    .card-img-top {
+    padding: 0px 25px 0px 25px;
+    width: 150px; /* Lebar kotak */
+    height: 150px; /* Tinggi kotak */
+    max-width: 100%; /* Maksimum lebar kotak (agar tetap responsif) */
+    max-height: 100%; /* Maksimum tinggi kotak (agar tetap responsif) */
+    
+    }
+    .card-text {
+      margin: 15px 0px 5px 5px;
+
+    }
+
+    .card-title {
+    margin: 5px;
+    }
+  .card-2 {
+    margin: 5px 0px 0px 5px;
+  }
+
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="navbar-nav">
+              <a class="nav-link active" aria-current="page" href="#">Dashboard</a>
+              <a class="nav-link" href="#">Kelas malam</a>
+              <a class="nav-link" href="#">Dosen pengampu</a>
+              <a class="nav-link disabled" aria-disabled="true">Profile</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    <div class="container">
+        <h1 class="my-4">Daftar Mahasiswa</h1>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="https://via.placeholder.com/300" class="card-img-top" alt="Margarita Pizza">
+                    <div class="card-body">
+                        <h5 class="card-title">Margarita Pizza</h5>
+                        <p class="card-text">A classic pizza topped with tomato sauce, mozzarella cheese, and fresh basil.</p>
+                        <h6 class="card-2">$9.99</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="https://via.placeholder.com/300" class="card-img-top" alt="Pepperoni Pizza">
+                    <div class="card-body">
+                        <h5 class="card-title">Pepperoni Pizza</h5>
+                        <p class="card-text">A pizza topped with tomato sauce, mozzarella cheese, and pepperoni slices.</p>
+                        <h6 class="card-2">$10.99</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="https://via.placeholder.com/300" class="card-img-top" alt="Veggie Pizza">
+                    <div class="card-body">
+                        <h5 class="card-title">Veggie Pizza</h5>
+                        <p class="card-text">A vegetarian pizza topped with tomato sauce, mozzarella cheese, bell peppers, onions, and olives.</p>
+                        <h6 class="card-2">$11.99</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Menggunakan Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+
+    <script> 
+// Container menu
+// const menuContainer = document.getElementsByClassName(".row");
+// const menu = array.from(document.querySelectorAll("md-col-4"));
+// console.log('menu');
+// Mendapatkan semua elemen dengan kelas 'menu-item'
+// const menuItems = Array.from(document.querySelectorAll(".col-md-4"));
+// const arrayFromNodeList = Array.from(menuItems);
+// Looping untuk menampilkan menu dari elemen HTML
+// menuItems.forEach(menuItem => {
+//   console.log('menuItem.textContent');
+//     const name = menuItem.querySelector("h5").textContent;
+//     const description = menuItem.getElementsByClassName(".card-text").textContent;
+//     const price = menuItem.getElementsByClassName(".card-2").textContent;
+
+//     const menuItemHTML = `
+//         <div class="col-md-4">
+//             <h5>${name}</h5>
+//             <p>${description}</p>
+//             <h6>${price}</h6>
+//         </div>
+//     `;
+//     menuContainer.insertAdjacentHTML("beforeend", menuItemHTML);
+// });
+
+// var menuItem = document.getElementsByClassName('row');
+// var columCount = menuItem[0].cells.length;
+
+// for (var i = 0; i < 50; i++) {
+//   for (var j = 0; j < columCount; j++) {
+//     var cell = menuItem.rows[0].cells[j];
+//     console.log(cell);
+//   }
+// }
+
+var cards = document.getElementsByClassName('card'); // Mengambil semua elemen dengan kelas 'card'
+
+for (var k = 0; k < 50; k++) { // Melooping kartu sebanyak 50 kali
+  for (var i = 0; i < cards.length; i++) {
+    var card = cards[i];
+    var title = card.querySelector('.card-title').innerText; // Mengambil teks dari elemen dengan kelas 'card-title'
+    var description = card.querySelector('.card-text').innerText; // Mengambil teks dari elemen dengan kelas 'card-text'
+    var price = card.querySelector('.card-2').innerText; // Mengambil teks dari elemen dengan kelas 'card-2'
+
+  //   console.log("Title:", title);
+  //   console.log("Description:", description);
+  //   console.log("Price:", price);
+  // Membuat elemen baru untuk menampilkan informasi kartu
+   var cardInfo = document.createElement('div');
+    cardInfo.innerHTML = "<h3>Title: " + title + "</h3>" +
+                         "<p>Description: " + description + "</p>" +
+                         "<p>Price: " + price + "</p>";
+    
+    // Menambahkan elemen baru ke dalam elemen dengan ID tertentu (misalnya, elemen dengan ID 'container')
+    document.getElementById('container').appendChild(cardInfo);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // var element = document.getElementsByClassName(col-md-4);
+    // for (var i = 0; i < element.length; i++) {
+    //   consol.log(element)
+    // }
+    //   const i = document.querySelectorAll('col-md-4');
+    //   // i.style.backgroundColor = 'black';
+    //  if (i) {
+    //   i.style.backgroundColor = "red";
+    //  } else {
+    //   console.error("elemen dengan class 'i' tidak di temukan");
+    //  }
+    //  console.log('HELLO WORD');
+    // for (let i = 0; i < col-md-4; i++ ) {
+    //   kolom[i] .style.backgroundColor = 'lightblue';
+    // }
+        // var element = document.createElement('div');
+        // element.classList.add('col-md-4');
+        // element.textContent = 'col-md-4 ' + i;
+        // element.appendChild(element)
+      
+  
+    </script>
+</body>
+</html>
